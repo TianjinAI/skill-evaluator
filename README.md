@@ -31,9 +31,11 @@ flowchart TD
 
 For example, Mac-only support belongs in the generic scope assessment. Whether it rules out adoption for a Windows user belongs in Round 2. A broken export remains a defect for both users. See the [complete fictional example](examples/two-users.md).
 
-## Round 2 includes your actual installation
+## Round 2 checks skills you already have installed
 
-Round 1 evaluates the candidate generically, including its philosophy and architecture. Round 2 tests its suitability for **your use case, workflow and environment**, including overlap with skills already installed.
+Round 1 evaluates the candidate generically, including its philosophy and architecture. Round 2 tests its suitability for **your use case, workflow and environment**. As part of that review, it screens skills you already have installed for overlap, duplication, complementary capabilities and potential conflicts.
+
+**This does not mean installing the candidate skill.** The installed-skill check is read-only. Installing the evaluator itself (see Quick start below) is a separate setup step; installing or activating any candidate requires your authorization and is not an automatic part of Round 2.
 
 The reviewer starts with an available skill catalog, then reads only the relevant metadata/instructions within authorized scope. It distinguishes duplicate installs, functional substitutes, partial overlap, complementary capabilities and possible trigger conflicts. No whole-machine search, credentials, conversation history or automatic activation/removal is required. If inventory access is unavailable, it requests a sanitized list or marks coverage incomplete. [Overlap procedure](references/installed-skill-overlap.md)
 
