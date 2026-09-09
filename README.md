@@ -1,34 +1,124 @@
 # Skill Evaluator
 
-A portable agent skill for evidence-backed package evaluation in two separately deliverable rounds.
+**Understand a skill on its own merits. Then decide whether it fits your work.**
 
-1. **Independent generic review:** purpose, features, architecture, instructions, correctness, reliability, privacy, evidence, licensing, and readiness. No assumptions about an individual user's preferences.
-2. **User-specific fit review:** maps that baseline to a user's actual tasks, workflow, host environment, constraints, alternatives, and adoption decision.
+[简体中文](README.zh-CN.md) · [Install](docs/INSTALLATION.md) · [Usage](docs/USAGE.md) · [Worked example](examples/two-users.md) · [Releases](https://github.com/TianjinAI/skill-evaluator/releases)
 
-The second round reuses the first; it does not alter intrinsic findings to suit a preferred verdict. Reviews distinguish publisher claims, source evidence, local checks, and completed task validation.
+Skill Evaluator is a public, MIT-licensed agent skill for reviewing skills, plugins, and related tools. It separates package quality from personal suitability, supports evidence-backed comparisons, and gives you a clear adoption decision without inventing precision.
 
-## Install
+**Current version: 1.1.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
 
-Repository: https://github.com/TianjinAI/skill-evaluator
+## Why two rounds?
 
-Give your skill-capable agent this repository URL and ask it to install the **whole directory** as `skill-evaluator`, keeping `references/` alongside `SKILL.md`. For WorkBuddy, ask it to fetch this repository through its supported skill-install workflow; exact UI and installation paths vary by version and have not been tested here.
+A well-designed tool can be wrong for your environment. A convenient tool can still have a serious defect. Combining those judgments too early makes reviews inconsistent.
 
-If your agent uses the shared skill directory, an example is:
-
-```sh
-git clone https://github.com/TianjinAI/skill-evaluator ~/.agents/skills/skill-evaluator
+```mermaid
+flowchart TD
+    A[Candidate and available evidence] --> B[Round 1: independent generic review]
+    B --> C[Reusable package baseline]
+    C --> D[Round 2: user-specific fit review]
+    E[Use case, workflow and environment] --> D
+    D --> F[Adopt, trial, adapt or skip]
 ```
 
-No runtime packages or service accounts are required by the skill itself. The reviewing agent needs suitable repository/file access; behavioral testing may need the candidate's dependencies and separately authorized access.
+| | Round 1: independent review | Round 2: tailored review |
+|---|---|---|
+| Main question | Does it credibly deliver its stated purpose? | Does it improve this user's actual work? |
+| Inputs | Package, declared audience, implementation and evidence | Round 1 baseline plus user context and alternatives |
+| Covers | Purpose, features, design, instruction quality, correctness, reliability, privacy, licensing, maintenance | Tasks, workflow, host/OS, data constraints, cost, autonomy, overlap and migration effort |
+| Output | Strengths, findings, evidence limits and package readiness | Fit mapping, adoption decision, conditions and a useful next step |
+| Independence | Can be completed and published on its own | References the baseline; does not rewrite facts to suit a preference |
 
-## Examples
+For example, Mac-only support belongs in the generic scope assessment. Whether it rules out adoption for a Windows user belongs in Round 2. A broken export remains a defect for both users. See the [complete fictional example](examples/two-users.md).
 
-- "Use skill-evaluator for a Round 1 review of this repository. Do not install it."
-- "Now run Round 2 using that review: I produce weekly reports on Windows in WorkBuddy, with no cloud upload of source documents."
-- "Compare these two skills. Keep their generic merits separate from their fit for my existing workflow."
+## Quick start
 
-## Evidence limits
+Ask your skill-capable agent to install the complete repository:
 
-This is a review method, not a security certification or automated benchmark. A valid skill package does not establish that its recommendations are correct. Version 1.0.0 was checked for structure and scenario coverage; live performance across agent products is not yet established.
+**https://github.com/TianjinAI/skill-evaluator**
 
-MIT licensed. Developed from a series of package reviews; public instructions contain no personal user profile or private review inputs.
+Then try:
+
+> Use skill-evaluator to review this repository. Start with an independent generic review. Do not install the candidate.
+
+For the second round:
+
+> Now assess its fit for me using that baseline. I produce weekly client reports on Windows, want minimal interruptions, and can only send source data to approved providers.
+
+For both:
+
+> Evaluate these two skills independently, then compare them for my existing workflow. Keep generic defects separate from personal preferences and say what you actually tested.
+
+Natural-language invocation works only if the host discovers the skill; explicit syntax varies by host. See [installation and WorkBuddy guidance](docs/INSTALLATION.md). Native WorkBuddy execution has not been validated here.
+
+## What it does
+
+- Reviews repository links, local packages, pasted skill instructions and release pages at the evidence level available.
+- Separates the idea, implementation and demonstrated effectiveness.
+- Checks ordinary operation and consequential failures, including false success and incomplete exports.
+- Distinguishes publisher claims, source observations, local checks, end-to-end task validation and unknowns.
+- Keeps severity separate from confidence; evaluates mandatory conditions without averaging away defects.
+- Compares candidates and the current workflow on shared criteria.
+- Reuses and updates baselines with explicit version tracking.
+- Provides editable review templates, an evidence ledger and a pilot plan.
+
+## Choose the effort, independently of the round
+
+| Depth | Typical scope |
+|---|---|
+| Screening | Documentation and focused inspection; quick shortlist decision |
+| Standard | Relevant source paths, dependencies, instructions and useful targeted checks |
+| Deep | Behavioral trials, failure cases and matched comparisons when warranted and authorized |
+
+A deep review is not automatically a penetration test, installation request or permission to use real accounts. A simple review need not create files or fill every template.
+
+## Understand the verdict
+
+Round 1 reports **ready for a bounded pilot**, **remediation needed**, **evidence insufficient**, or **unsuitable for its stated core purpose**.
+
+Round 2 recommends **adopt**, **trial with conditions**, **adapt before use**, or **skip for this use case**.
+
+Claims carry one of five evidence labels: **claimed**, **source-supported**, **locally checked**, **task-validated**, or **unknown**. Unknown is neither pass nor fail. A passed package check does not establish good judgment, correct sources or successful operation in your host.
+
+## Optional review workspace
+
+From the installed skill directory, create a draft in a new directory whose parent exists:
+
+```sh
+python3 scripts/init_review.py ./example-review --package "Example Package" --revision "v2.4" --rounds both
+```
+
+This creates separate generic and personal drafts, a CSV evidence ledger and a pilot worksheet. It refuses existing destinations, makes no network requests, and does not run the candidate. It does not evaluate anything automatically. [Template guide](templates/README.md)
+
+## Package map
+
+| Path | Purpose |
+|---|---|
+| [SKILL.md](SKILL.md) | Agent entrypoint, round selection, evidence and decision rules |
+| [references/round-1.md](references/round-1.md) | Generic review rubric |
+| [references/round-2.md](references/round-2.md) | User context and fit rubric |
+| [references/evidence-practice.md](references/evidence-practice.md) | Findings, severity, confidence and testing discipline |
+| [references/category-checks.md](references/category-checks.md) | Category-specific risks and checks |
+| [references/comparison-and-reassessment.md](references/comparison-and-reassessment.md) | Comparisons, version changes and baseline reuse |
+| [docs/USAGE.md](docs/USAGE.md) | Requests, outputs and practical workflow |
+| [templates/](templates/README.md) | Copyable review artifacts |
+| [examples/](examples/two-users.md) | Worked two-round example |
+| [evals/](evals/README.md) | Behavioral evaluation protocol, not claimed benchmark results |
+
+## Validation and limits
+
+The package includes automated tests for the initializer's filesystem behavior and relative documentation links. Run them with:
+
+```sh
+python3 -m unittest discover -s tests -v
+```
+
+See [VALIDATION.md](VALIDATION.md) for the actual check record. Manual scenario walkthroughs and CI do not establish agent compliance or superior outcomes across models. This is a structured review method, not a security certification, investment adviser or legal opinion. The reviewer must still verify material facts and stay within its host's authorization rules.
+
+The package adds no telemetry or background service. Your host and tools still determine where prompts and files are processed. Keep personal Round 2 records private unless their publication is authorized. [Security and privacy](SECURITY.md)
+
+## Contribute and reuse
+
+[Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Issues](https://github.com/TianjinAI/skill-evaluator/issues) · [MIT license](LICENSE)
+
+Contributions should improve an actual review decision with evidence or a reproducible scenario. Public examples use fictional or sanitized inputs. The skill is host-neutral; product-specific integrations are documented only to the extent tested.

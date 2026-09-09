@@ -1,6 +1,20 @@
 # Validation and limitations
 
-Version 1.0.0, 2026-09-08.
+## Version 1.1.0
+
+Actual local checks:
+
+- 10 automated tests passed on Python 3.14: generic/both-round file sets, Unicode metadata, existing-directory preservation, symlink rejection, bad input, missing templates, cleanup after write failure, CLI failure status, local Markdown links and version format.
+- Actual CLI created four drafts in a disposable directory; a repeated call returned status 1 and left every original file unchanged.
+- Skill-creator package/frontmatter validation passed; git diff whitespace check passed.
+- English/Chinese onboarding, reference routing, templates and the fictional worked example reviewed for consistency with the two-round contract.
+- CI runs the automated tests on Python 3.10, 3.12 and 3.13. Check the release commit's GitHub Actions result for remote status.
+
+These tests verify packaging/helper behavior, not evaluation judgment. WorkBuddy-native discovery, live cross-agent effectiveness, independent agent execution of the behavioral cases, and comparative outcome improvements remain untested. The new evals directory describes a protocol, not benchmark results.
+
+## Version 1.0.0 — original walkthrough
+
+Recorded 2026-09-08.
 
 ## Manual scenario walkthrough (instruction review, not agent execution)
 

@@ -7,6 +7,12 @@ description: Evaluate agent skills, plugins, and related tools through an indepe
 
 Evaluate the idea, implementation, and evidence of effectiveness separately. A polished prompt, popular repository, passing packaging check, or convincing persona does not establish successful task performance.
 
+## Scope and review depth
+
+Accept repository links, local packages, skill text, release pages, or an existing review. Match depth to the decision: **screening** uses available documentation and focused inspection; **standard** traces implementation and tests consequential claims; **deep** adds bounded behavioral trials and relevant failure cases when authorized. Depth is separate from round: either round can be brief or deep. State the chosen scope; never claim tests ran because a deep review was requested. Do not force exhaustive testing or a long report for a simple screening request.
+
+For substantial work, read [evidence practice](references/evidence-practice.md). For comparisons or a changed release, read [comparison and reassessment](references/comparison-and-reassessment.md). Answer in the user's language; do not inherit the candidate author's tone or language constraints.
+
 ## Two independently deliverable rounds
 
 **Round 1 — Independent generic review.** Assess the package against its declared purpose and reasonable expectations for its category. Read [the generic rubric](references/round-1.md). Produce a reusable baseline without relying on the current user's preferences, tools, account details, or willingness to accept risk. Record the reviewed version and inspection scope. Generic does not mean context-free: the author's stated audience and supported environments belong here.
@@ -46,3 +52,5 @@ Round 1 ends with a **package-readiness assessment**: ready for a bounded pilot,
 Round 2 ends with **adopt / trial with conditions / adapt before use / skip for this use case**, plus the reason, material conditions, and a concrete next action. Do not invent overall numeric scores. If the user requests scoring, expose weights, evidence, and uncertainty; gates still override averages.
 
 Use [the review template](references/review-template.md) for substantial evaluations; compress it for simple requests without dropping the separation or evidence limits. Read [category checks](references/category-checks.md) only for relevant categories. Recommendations to patch or publish do not themselves authorize those actions.
+
+For saved deliverables, copy only the useful files from [templates](templates/README.md). The optional `scripts/init_review.py` creates a new review folder without installing or running the candidate; its instructions are in the [usage guide](docs/USAGE.md). Never fill a blank template with invented evidence. Inline answers remain appropriate for short reviews.
