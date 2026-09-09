@@ -6,7 +6,7 @@
 
 Skill Evaluator is a public, MIT-licensed agent skill for reviewing skills, plugins, and related tools. It separates package quality from personal suitability, supports evidence-backed comparisons, and gives you a clear adoption decision without inventing precision.
 
-**Current version: 1.2.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
+**Current version: 1.3.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
 
 ## Why two rounds?
 
@@ -16,12 +16,12 @@ A well-designed tool can be wrong for your environment. A convenient tool can st
 flowchart TD
     A[Candidate and available evidence] --> B[Round 1: independent generic review]
     B --> C[Reusable package baseline]
-    C --> D[Round 2: user-specific fit review]
+    C --> D[Round 2: user-specific suitability test]
     E[Use case, workflow and environment] --> D
     D --> F[Adopt, trial, adapt or skip]
 ```
 
-| | Round 1: independent review | Round 2: tailored review |
+| | Round 1: generic screening/assessment | Round 2: suitability test |
 |---|---|---|
 | Main question | Does it credibly deliver its stated purpose? | Does it improve this user's actual work? |
 | Inputs | Package, declared audience, implementation and evidence | Round 1 baseline plus user context and alternatives |
@@ -30,6 +30,16 @@ flowchart TD
 | Independence | Can be completed and published on its own | References the baseline; does not rewrite facts to suit a preference |
 
 For example, Mac-only support belongs in the generic scope assessment. Whether it rules out adoption for a Windows user belongs in Round 2. A broken export remains a defect for both users. See the [complete fictional example](examples/two-users.md).
+
+## Round 2 includes your actual installation
+
+Round 1 evaluates the candidate generically, including its philosophy and architecture. Round 2 tests its suitability for **your use case, workflow and environment**, including overlap with skills already installed.
+
+The reviewer starts with an available skill catalog, then reads only the relevant metadata/instructions within authorized scope. It distinguishes duplicate installs, functional substitutes, partial overlap, complementary capabilities and possible trigger conflicts. No whole-machine search, credentials, conversation history or automatic activation/removal is required. If inventory access is unavailable, it requests a sanitized list or marks coverage incomplete. [Overlap procedure](references/installed-skill-overlap.md)
+
+A local read by a cloud-hosted agent may still enter the host provider's context. Respect approved-provider/offline constraints, and keep inventory details in private Round 2 notes. This is a review procedure, not a background scanner.
+
+Suitability results show the actual checks and their outcomes. A static assessment without a representative user task is labeled **assessed only—suitability not task-validated**. Missing permissions or runtime yield a conditional conclusion, not an invented test pass.
 
 ## Quick start
 

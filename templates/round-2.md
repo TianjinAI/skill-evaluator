@@ -1,4 +1,4 @@
-# Round 2 — User-specific fit review
+# Round 2 — User-specific suitability test
 
 Status: DRAFT — private context; not approved for publication
 
@@ -17,6 +17,20 @@ Status: DRAFT — private context; not approved for publication
 | Data sensitivity and provider boundaries | | |
 | Cost, time and maintenance | | |
 | Existing alternatives | | |
+
+## Installed-skill overlap (private)
+
+Inventory source, authorized scope, date, coverage and omissions:
+
+| Existing capability | Availability evidence | Duplicate/substitute/overlap/complement/conflict/unknown | Candidate's distinct value | Recommendation | Confidence |
+|---|---|---|---|---|---|
+
+## Suitability checks and actual results
+
+| User requirement | Check/input | Expected result | Actual result | Passed/failed/not tested/blocked/NA | Evidence |
+|---|---|---|---|---|---|
+
+Representative task executed? If not: assessed only—suitability not task-validated.
 
 ## Fit mapping
 

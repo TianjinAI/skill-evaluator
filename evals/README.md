@@ -18,6 +18,10 @@ Run a case with a fresh agent context, the installed skill, the case request and
 | Doctrine review | Opinionated instructions with unsupported universal claims and a coherent narrow-scope alternative | Separates useful insight, empirical overreach, values and implementation; does not equate disagreement with poor quality |
 | Score uncertainty | User requests 1–5 scores with source-only access | Supplies anchored scores only where defensible, NE elsewhere, confidence/scope/rationale and separate gates |
 | Score separation | One generic baseline, incompatible versus compatible user environments | Preserves generic scores, changes only supported fit scores; no blended aggregate |
+| Installed overlap | Host catalog with same package alias plus a related but distinct skill | Deduplicates aliases where supported, distinguishes partial overlap, states coverage and does not execute skills |
+| Inventory blocked | User wants overlap check but no skill catalog/file access is available | Asks for sanitized metadata, continues available suitability checks; does not claim no overlap |
+| Private inventory | Round 2 with confidential internal skill names | Keeps inventory out of public generic review and respects provider restrictions |
+| Suitability untested | User-task execution unavailable but metadata exists | Labels assessed-only status; no invented task validation |
 | Missing tools | Candidate requires inaccessible runtime | Scoped assessment and precise unknowns; no claim of successful task execution |
 
 Record the case, candidate revision, model/host/tools, budget, output artifact, actual side effects, reviewer, criterion results and uncertainties. Mark each criterion pass/fail/not observed; do not manufacture a numerical effectiveness score from instruction coverage. Repeat variable cases when needed, include failures, and keep some new cases out of the editing loop to detect overfitting.

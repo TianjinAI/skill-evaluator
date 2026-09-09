@@ -1,6 +1,6 @@
 ---
 name: skill-evaluator
-description: Evaluate agent skills, plugins, and related tools through an independent package review and a separate user-specific fit review. Use for adoption decisions, comparisons, or evidence-backed improvement recommendations.
+description: Evaluate agent skills, plugins, and related tools through an independent package review and a separate user-specific suitability test. Use for adoption decisions, comparisons, or evidence-backed improvement recommendations.
 ---
 
 # Skill Evaluator
@@ -9,15 +9,15 @@ Evaluate the idea, implementation, and evidence of effectiveness separately. A p
 
 ## Scope and review depth
 
-Accept repository links, local packages, skill text, release pages, or an existing review. Match depth to the decision: **screening** uses available documentation and focused inspection; **standard** traces implementation and tests consequential claims; **deep** adds bounded behavioral trials and relevant failure cases when authorized. Depth is separate from round: either round can be brief or deep. State the chosen scope; never claim tests ran because a deep review was requested. Do not force exhaustive testing or a long report for a simple screening request.
+Accept repository links, local packages, skill text, release pages, or an existing review. Match depth to the decision: **screening** uses available documentation and focused inspection; **standard** traces implementation and tests consequential claims; **deep** adds bounded behavioral trials and relevant failure cases when authorized. Round 1 is generic screening/assessment, even when detailed; Round 2 is user-specific suitability testing, even when bounded. Depth describes effort within the round, not a replacement for this distinction. Generic fixture checks belong in Round 1; user-environment and installed-skill checks belong in Round 2. State the chosen scope; never claim tests ran because a deep review was requested. Do not force exhaustive testing or a long report for a simple screening request.
 
 For substantial work, read [evidence practice](references/evidence-practice.md). For comparisons or a changed release, read [comparison and reassessment](references/comparison-and-reassessment.md). Answer in the user's language; do not inherit the candidate author's tone or language constraints.
 
 ## Two independently deliverable rounds
 
-**Round 1 — Independent generic review.** Assess the package against its declared purpose and reasonable expectations for its category. Read [the generic rubric](references/round-1.md). Standard/deep reviews also use [design and doctrine](references/design-and-doctrine.md) to assess the underlying thesis, assumptions, causal reasoning, architecture and tradeoffs—not just whether the package runs. Produce a reusable baseline without relying on the current user's preferences, tools, account details, or willingness to accept risk. Record the reviewed version and inspection scope. Generic does not mean context-free: the author's stated audience and supported environments belong here.
+**Round 1 — Generic screening and assessment.** Assess the package against its declared purpose and reasonable expectations for its category. Read [the generic rubric](references/round-1.md). Standard/deep reviews also use [design and doctrine](references/design-and-doctrine.md) to assess the underlying thesis, assumptions, causal reasoning, architecture and tradeoffs—not just whether the package runs. Produce a reusable baseline without relying on the current user's preferences, tools, account details, or willingness to accept risk. Record the reviewed version and inspection scope. Generic does not mean context-free: the author's stated audience and supported environments belong here.
 
-**Round 2 — User-specific fit review.** Start from a completed Round 1 and read [the fit rubric](references/round-2.md). Evaluate the particular user's use case, workflow, environment, alternatives, constraints, and desired outcomes. Keep this as a separate assessment linked to the baseline. A poor fit does not retroactively make the package defective, and a good fit does not erase a baseline defect.
+**Round 2 — User-specific suitability test.** Start from a completed Round 1 and read [the suitability rubric](references/round-2.md). Test the candidate against the user's use case, workflow, actual environment, installed capabilities and acceptance criteria. Include the [installed-skill overlap check](references/installed-skill-overlap.md) using available authorized read-only metadata; inspect likely matches only. Record unavailable/partial inventory coverage. Separate assessed compatibility from executed tests and do not call a static fit opinion a passed suitability test. Keep this as a separate assessment linked to the baseline. A poor fit does not retroactively make the package defective, and a good fit does not erase a baseline defect.
 
 Routing:
 - "Evaluate this" with no use context: complete Round 1. Offer Round 2 with one concise request for the missing context; do not block Round 1 or invent a profile.
@@ -49,7 +49,7 @@ Do not average away a failed gate. Use **pass / conditional / fail / unknown / n
 
 Round 1 ends with a **package-readiness assessment**: ready for a bounded pilot, remediation needed, evidence insufficient, or unsuitable for its stated core purpose. This is not a personal adoption recommendation.
 
-Round 2 ends with **adopt / trial with conditions / adapt before use / skip for this use case**, plus the reason, material conditions, and a concrete next action. Use the [anchored 1–5 category rubric](references/scoring.md) by default for standard/deep reviews, and whenever scores are requested. Include confidence, evidence, scope and rationale for each category; mark insufficient evidence NE and genuine non-applicability NA. Keep Round 1 quality and Round 2 fit scorecards separate. Overall scores are optional only when requested; gates still override averages.
+Round 2 ends with **adopt / trial with conditions / adapt before use / skip for this use case**, plus the reason, material conditions, a concrete next action, installed-skill overlap findings and explicit test coverage (passed/failed/not tested/blocked/not applicable per check). If no representative user task ran, label the conclusion "assessed only—suitability not task-validated". Use the [anchored 1–5 category rubric](references/scoring.md) by default for standard/deep reviews, and whenever scores are requested. Include confidence, evidence, scope and rationale for each category; mark insufficient evidence NE and genuine non-applicability NA. Keep Round 1 quality and Round 2 fit scorecards separate. Overall scores are optional only when requested; gates still override averages.
 
 Use [the review template](references/review-template.md) for substantial evaluations; compress it for simple requests without dropping the separation or evidence limits. Read [category checks](references/category-checks.md) only for relevant categories. Recommendations to patch or publish do not themselves authorize those actions.
 

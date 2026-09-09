@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0 — Suitability testing and installed-skill overlap
+
+- Clarified Round 1 as generic screening/assessment and Round 2 as user-specific suitability testing.
+- Added scoped, metadata-first read-only inventory and overlap/conflict analysis.
+- Added environment/requirement check matrices and assessed-only versus task-validated status.
+- Preserved six fit categories; overlap informs value, workflow and compatibility instead of becoming a duplicate penalty.
+- Updated templates, privacy guidance, bilingual onboarding and prospective evaluation cases. No machine-wide scanner or automatic skill mutations added.
+
 ## 1.2.0 — Design, doctrine and category scores
 
 - Added explicit philosophy/doctrine assessment and architecture/tradeoff review.

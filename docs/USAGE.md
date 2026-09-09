@@ -23,6 +23,12 @@ You do not need every field. The agent should reuse known context and ask only a
 
 No passwords, tokens, customer names or actual confidential records are needed to describe these constraints. The agent should label inferred preferences and avoid claiming compatibility until supported.
 
+## Check overlap in Round 2
+
+> Run a suitability test for my actual workflow. Use the skill catalog already available to you, and check whether this duplicates or conflicts with installed skills. Inspect likely overlaps read-only; do not install, run or remove skills. State inventory coverage and which suitability checks actually ran.
+
+If the host cannot list skills, provide a sanitized list of names, descriptions and relevant versions. Do not provide secrets or whole configuration files. The [overlap procedure](../references/installed-skill-overlap.md) separates installed, enabled, callable and execution-verified states and protects private inventory information.
+
 ## Save an auditable review
 
 For larger reviews, the optional helper creates editable files:

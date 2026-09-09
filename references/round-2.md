@@ -1,4 +1,4 @@
-# Round 2: User-specific fit review
+# Round 2: User-specific suitability test
 
 Question: For this user's actual work and environment, does the candidate improve outcomes enough to justify its costs and constraints?
 
@@ -17,19 +17,31 @@ Use information already provided. Record only what affects the decision, disting
 
 Ask about a missing requirement only if it could change the recommendation. Continue independent work while waiting when the host supports it. If critical context remains unavailable, provide a conditional fit assessment rather than an unconditional adoption decision. Do not make an entire questionnaire mandatory.
 
+## Check the actual environment and installed capabilities
+
+Follow [the overlap procedure](installed-skill-overlap.md) for a bounded, read-only inventory. Use the host's existing catalog first, and inspect likely substitutes or conflicts only as needed. Record whether a capability is installed, enabled, callable or execution-verified. Keep inventory scope/omissions visible; lack of access does not mean no duplicates exist.
+
+Check relevant host/OS/tools/dependencies against the candidate contract using available read-only evidence. Do not infer operational compatibility from a product name. Identify the candidate's incremental value, likely trigger conflicts, complementary handoffs and alternatives already available.
+
 ## Map baseline to fit
 
 Link the exact Round 1 revision. For each relevant finding state its consequence for this use case. Keep intrinsic defects distinct from fit concerns. Examples: a Mac-only app may be coherent in Round 1 and unusable for a Windows user in Round 2; a required cloud endpoint may be acceptable generally but disqualifying for an offline workflow.
 
 Check compatibility by actual capabilities rather than model brand. Identify overlap and complementary value with existing tools. Do not recommend installing a second complete workflow solely because its component library is useful.
 
-## Pilot only when warranted
+## Test suitability against the user task
+
+Build a small acceptance matrix: requirement → check/input → expected result → actual result → status → evidence. Use passed, failed, not tested, blocked, or not applicable, with a reason. Establish task and environment requirements before judging.
+
+Run a bounded representative task when needed and feasible under existing authorization. Use disposable/sanitized inputs where possible. Do not install or activate a candidate, expose private data or perform real-account writes simply because this is Round 2. If necessary access or runtime is missing, complete available checks and give a conditional conclusion with the exact blocker. Do not replace user-specific testing with more generic source review.
+
+### Matched task trial
 
 Define a small representative task with fixed inputs and measurable acceptance criteria. Compare the current workflow and candidate; add a plain-agent baseline if it answers a different useful question. Use matched model, tools, time/cost budget, and inputs when feasible; record unavoidable differences. Include relevant edge/failure cases. For variable tasks, repeat enough to avoid a verdict based on one lucky output; do not impose a universal run count.
 
 Measure outcomes that matter: task completeness, factual/data fidelity, false success, unintended side effects, revision effort, recovery, user interventions, elapsed time, and cost. A test plan is not a test result. Do not claim WorkBuddy or another host is validated merely because SKILL.md is present.
 
-End with an adoption decision and explicit conditions. Suggest the smallest useful adaptation; distinguish a configuration change from maintaining a fork. Describe remaining uncertainty and who/what can resolve it. Reuse generic evidence rather than repeating the whole baseline.
+End with an adoption decision, explicit conditions, overlap recommendation and actual test coverage. When no representative task ran, state "assessed only—suitability not task-validated"; if some tests ran, identify which requirements remain untested. A blocked trial is not a passed test. Suggest the smallest useful adaptation; distinguish a configuration change from maintaining a fork. Describe remaining uncertainty and who/what can resolve it. Reuse generic evidence rather than repeating the whole baseline.
 
 
 ## Fit scorecard

@@ -1,5 +1,12 @@
 # Validation and limitations
 
+## Version 1.3.0
+
+- All 10 existing package/helper tests passed; skill frontmatter, local references and whitespace checks passed.
+- Manual instruction walkthrough covered available/partial/blocked inventory, same-installation aliases, related-but-distinct skills, potential trigger conflicts, private names and cloud-provider constraints.
+- Suitability templates now distinguish requirement checks and real task outcomes from assessed-only conclusions.
+- No user installation was scanned for this release. No scanner executable was introduced. Inventory handling and conflict detection are host-mediated procedures and have not been behaviorally validated across agent products; added eval cases are prospective.
+
 ## Version 1.2.0
 
 - All 10 existing package/helper tests passed after template and reference changes.

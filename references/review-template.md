@@ -15,12 +15,14 @@ Scale detail to the decision. Use two visibly separate rounds; omit Round 2 when
 - Checks performed and actual results; checks not performed.
 - Readiness assessment, supported uses, required remediation, residual unknowns.
 
-## Round 2 — User-specific fit review
+## Round 2 — User-specific suitability test
 
 - Baseline revision/reference and whether it remains current.
 - User profile: explicit needs, known environment, assumptions, critical gaps.
 - Requirement → baseline finding/capability → fit consequence → adaptation if any.
+- Bounded installed-skill inventory: scope, omissions, availability and duplicate/substitute/overlap/complement/conflict findings.
 - Existing alternatives and incremental value for this user.
+- User requirement → check → expected/actual result → status/evidence; distinguish assessed-only fit from task-validated suitability.
 - Separate fit scorecard using the six Round 2 categories; include confidence, evidence, scope and rationale.
 - Decision: adopt / trial with conditions / adapt before use / skip for this use case.
 - Pilot acceptance criteria, actual results if tested, next action, residual uncertainty.
