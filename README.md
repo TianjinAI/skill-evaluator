@@ -6,7 +6,7 @@
 
 Skill Evaluator is a public, MIT-licensed agent skill for reviewing skills, plugins, and related tools. It separates package quality from personal suitability, supports evidence-backed comparisons, and gives you a clear adoption decision without inventing precision.
 
-**Current version: 1.1.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
+**Current version: 1.2.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
 
 ## Why two rounds?
 
@@ -61,6 +61,26 @@ Natural-language invocation works only if the host discovers the skill; explicit
 - Compares candidates and the current workflow on shared criteria.
 - Reuses and updates baselines with explicit version tracking.
 - Provides editable review templates, an evidence ledger and a pilot plan.
+
+## Review the thinking and design, not only feasibility
+
+Round 1 explicitly reconstructs the package's philosophy: values, empirical assumptions, heuristics, causal logic and openness to counterevidence. It then traces how those principles are implemented through routing, tools, state, validation and recovery, and evaluates alternatives and tradeoffs. A coherent doctrine may have a weak implementation; a technically sound implementation may enforce a flawed doctrine. These receive separate assessments. [Design and doctrine guide](references/design-and-doctrine.md)
+
+## Category scores: 1–5
+
+Standard/deep reviews include scored categories by default; screening can stay qualitative. Scores are anchored expert judgments, not objective measurements.
+
+| Score | Meaning |
+|---|---|
+| 1 | Poor: material failure in the assessed scope |
+| 2 | Weak: substantial gaps require remediation |
+| 3 | Adequate: workable with meaningful limitations |
+| 4 | Strong: well-supported, limited weaknesses |
+| 5 | Excellent: exceptionally convincing within explicit boundaries |
+
+Round 1 scores ten categories: purpose, philosophy, architecture, instructions, correctness, reliability, authority/privacy, evidence, efficiency/maintenance and incremental value. Round 2 has six separate fit categories for tasks, workflow/philosophy alignment, environment, data/authority, operating costs and value over alternatives.
+
+Every score includes confidence, evidence, scope and rationale. **NE** means not enough evidence; **NA** means not applicable. Neither is converted to a midpoint. Mandatory failed gates still block the scoped adoption decision. No combined overall score is produced unless requested. [Full scoring anchors](references/scoring.md)
 
 ## Choose the effort, independently of the round
 

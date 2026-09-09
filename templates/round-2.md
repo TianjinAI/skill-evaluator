@@ -23,6 +23,19 @@ Status: DRAFT — private context; not approved for publication
 | Requirement | Baseline finding/capability | Fit consequence | Adaptation or validation needed |
 |---|---|---|---|
 
+## Category scorecard
+
+Whole-number 1–5 assessments with rationale; NE = not enough evidence, NA = not applicable. Default NE entries are unassessed drafts, not verdicts.
+
+| Category | Score | Confidence and reason | Evidence IDs / scope | Rationale and main limitation |
+|---|---|---|---|---|
+| Task and output fit | NE | | | |
+| Workflow and philosophy alignment | NE | | | |
+| Environment compatibility | NE | | | |
+| Data and authority fit | NE | | | |
+| Cost and operating fit | NE | | | |
+| Value over existing alternatives | NE | | | |
+
 ## Decision
 
 Choose and justify: adopt / trial with conditions / adapt before use / skip for this use case.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0 — Design, doctrine and category scores
+
+- Added explicit philosophy/doctrine assessment and architecture/tradeoff review.
+- Added anchored whole-number 1–5 scores across ten generic categories and six fit categories.
+- Scores carry confidence, evidence, scope and rationale; NE/NA preserve uncertainty.
+- Updated entrypoint, rubrics, templates and bilingual onboarding. Mandatory gates remain separate; no default aggregate score.
+
 ## 1.1.0 — Public package expansion
 
 - Expanded English README and added a Chinese introduction.

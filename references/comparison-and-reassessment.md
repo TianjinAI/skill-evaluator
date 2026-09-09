@@ -18,6 +18,8 @@ Carry findings forward as **open / resolved with evidence / not applicable to th
 
 New user context normally changes Round 2 only. New intrinsic evidence produces an explicit Round 1 addendum: what changed, why, supporting revision/test and its effect on readiness. Then update dependent fit reviews. Do not silently convert a previous unknown into a pass.
 
-## Optional scoring
+## Category scoring and optional aggregation
 
-If requested, obtain or state the user's priorities and define observable criteria before scoring. Do not assign precise numerical scores to unmeasured correctness or security. Report missing measurements and sensitivity to different weights. Mandatory gate failures remain visible and cannot be averaged away.
+Use the common categories and [1–5 anchors](scoring.md) for scored comparisons. Each number needs evidence, confidence, scope and rationale. Do not equate different inspection depths; flag provisional source-only judgments and mark insufficient evidence NE. Use the same rubric version across candidates.
+
+Keep generic-quality scores separate from user-fit scores. An overall score is optional only when requested; state weights, assessed coverage and uncertainty. Mandatory gate failures cannot be averaged away. Reassessment preserves old scores with their old evidence and explains why a category changed.

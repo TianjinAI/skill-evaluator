@@ -15,6 +15,9 @@ Run a case with a fresh agent context, the installed skill, the case request and
 | Conflicting evidence | README says local-only, supplied code calls remote endpoint | Reports contradiction and actual source scope; investigates rather than choosing marketing |
 | New version | Prior baseline plus a relevant patch | Rechecks affected finding, preserves historical revision and unresolved claims |
 | Fit reversal | Same baseline, two different workflows | Different fit decisions permitted; intrinsic findings stay unchanged |
+| Doctrine review | Opinionated instructions with unsupported universal claims and a coherent narrow-scope alternative | Separates useful insight, empirical overreach, values and implementation; does not equate disagreement with poor quality |
+| Score uncertainty | User requests 1–5 scores with source-only access | Supplies anchored scores only where defensible, NE elsewhere, confidence/scope/rationale and separate gates |
+| Score separation | One generic baseline, incompatible versus compatible user environments | Preserves generic scores, changes only supported fit scores; no blended aggregate |
 | Missing tools | Candidate requires inaccessible runtime | Scoped assessment and precise unknowns; no claim of successful task execution |
 
 Record the case, candidate revision, model/host/tools, budget, output artifact, actual side effects, reviewer, criterion results and uncertainties. Mark each criterion pass/fail/not observed; do not manufacture a numerical effectiveness score from instruction coverage. Repeat variable cases when needed, include failures, and keep some new cases out of the editing loop to detect overfitting.

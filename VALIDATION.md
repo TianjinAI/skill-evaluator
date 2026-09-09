@@ -1,5 +1,13 @@
 # Validation and limitations
 
+## Version 1.2.0
+
+- All 10 existing package/helper tests passed after template and reference changes.
+- Skill frontmatter/package validation and whitespace checks passed.
+- Manually checked round/category consistency, design/doctrine routing and scorecard templates.
+- Manual scoring walkthrough: a source-level false-success path supports a low scoped recovery score, not a whole-application rating; absent architecture evidence remains NE; a private or unavailable implementation is not automatically rated 1; user-environment changes affect fit scores rather than intrinsic scores.
+- Added prospective behavioral cases for doctrine review, scoring uncertainty and round separation. These cases have not been run with an independent agent. No inter-rater calibration or measured scoring reliability is claimed.
+
 ## Version 1.1.0
 
 Actual local checks:

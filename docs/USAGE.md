@@ -35,6 +35,12 @@ Python 3.10+; standard library only. Destination must not already exist. Paths a
 
 Fill the evidence ledger with source locators and actual observations. Reference evidence IDs in findings. Remove the draft label only when the review is complete; keep untested areas explicit. The helper does not grade or verify a review.
 
+## Request a scored design review
+
+> Review the underlying philosophy, assumptions and architecture, then score each major category from 1 to 5. Keep confidence and evidence visible; mark categories NE if you cannot assess them.
+
+Use the [design guide](../references/design-and-doctrine.md) and [score anchors](../references/scoring.md). Scores describe the stated inspection scope, not a guarantee of all behavior.
+
 ## Read the conclusion correctly
 
 - **Ready for a bounded pilot** is a generic readiness judgment, not a blanket endorsement.

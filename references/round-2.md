@@ -30,3 +30,8 @@ Define a small representative task with fixed inputs and measurable acceptance c
 Measure outcomes that matter: task completeness, factual/data fidelity, false success, unintended side effects, revision effort, recovery, user interventions, elapsed time, and cost. A test plan is not a test result. Do not claim WorkBuddy or another host is validated merely because SKILL.md is present.
 
 End with an adoption decision and explicit conditions. Suggest the smallest useful adaptation; distinguish a configuration change from maintaining a fork. Describe remaining uncertainty and who/what can resolve it. Reuse generic evidence rather than repeating the whole baseline.
+
+
+## Fit scorecard
+
+Use the six categories in [scoring](scoring.md) for standard/deep reviews or when requested. Evaluate alignment with the doctrine’s stated values separately from its generic reasoning quality. Link relevant Round 1 findings and score changes to this user’s requirements. Missing context is NE, never a guessed midpoint. Keep mandatory gates visible.

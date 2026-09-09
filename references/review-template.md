@@ -6,7 +6,9 @@ Scale detail to the decision. Use two visibly separate rounds; omit Round 2 when
 
 - Package, canonical source, pinned revision, date, review scope.
 - Main purpose, package type, intended audience, features, architecture.
-- Strengths and proposed incremental value.
+- Underlying thesis, values, assumptions, counterexamples and revisability; architecture and doctrine-to-mechanism mapping.
+- Strengths, tradeoffs, plausible alternatives and proposed incremental value.
+- Generic category scorecard: score 1–5/NE/NA | confidence | evidence | scope | rationale.
 - Findings: severity | confidence/evidence label | trigger | behavior | consequence | evidence location | remedy.
 - Distinguish fixable defects, inherent limitations, and author conventions.
 - Applicable gates: result, evidence, scope, unresolved question.
@@ -19,6 +21,7 @@ Scale detail to the decision. Use two visibly separate rounds; omit Round 2 when
 - User profile: explicit needs, known environment, assumptions, critical gaps.
 - Requirement → baseline finding/capability → fit consequence → adaptation if any.
 - Existing alternatives and incremental value for this user.
+- Separate fit scorecard using the six Round 2 categories; include confidence, evidence, scope and rationale.
 - Decision: adopt / trial with conditions / adapt before use / skip for this use case.
 - Pilot acceptance criteria, actual results if tested, next action, residual uncertainty.
 

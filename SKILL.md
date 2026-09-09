@@ -15,7 +15,7 @@ For substantial work, read [evidence practice](references/evidence-practice.md).
 
 ## Two independently deliverable rounds
 
-**Round 1 — Independent generic review.** Assess the package against its declared purpose and reasonable expectations for its category. Read [the generic rubric](references/round-1.md). Produce a reusable baseline without relying on the current user's preferences, tools, account details, or willingness to accept risk. Record the reviewed version and inspection scope. Generic does not mean context-free: the author's stated audience and supported environments belong here.
+**Round 1 — Independent generic review.** Assess the package against its declared purpose and reasonable expectations for its category. Read [the generic rubric](references/round-1.md). Standard/deep reviews also use [design and doctrine](references/design-and-doctrine.md) to assess the underlying thesis, assumptions, causal reasoning, architecture and tradeoffs—not just whether the package runs. Produce a reusable baseline without relying on the current user's preferences, tools, account details, or willingness to accept risk. Record the reviewed version and inspection scope. Generic does not mean context-free: the author's stated audience and supported environments belong here.
 
 **Round 2 — User-specific fit review.** Start from a completed Round 1 and read [the fit rubric](references/round-2.md). Evaluate the particular user's use case, workflow, environment, alternatives, constraints, and desired outcomes. Keep this as a separate assessment linked to the baseline. A poor fit does not retroactively make the package defective, and a good fit does not erase a baseline defect.
 
@@ -49,7 +49,7 @@ Do not average away a failed gate. Use **pass / conditional / fail / unknown / n
 
 Round 1 ends with a **package-readiness assessment**: ready for a bounded pilot, remediation needed, evidence insufficient, or unsuitable for its stated core purpose. This is not a personal adoption recommendation.
 
-Round 2 ends with **adopt / trial with conditions / adapt before use / skip for this use case**, plus the reason, material conditions, and a concrete next action. Do not invent overall numeric scores. If the user requests scoring, expose weights, evidence, and uncertainty; gates still override averages.
+Round 2 ends with **adopt / trial with conditions / adapt before use / skip for this use case**, plus the reason, material conditions, and a concrete next action. Use the [anchored 1–5 category rubric](references/scoring.md) by default for standard/deep reviews, and whenever scores are requested. Include confidence, evidence, scope and rationale for each category; mark insufficient evidence NE and genuine non-applicability NA. Keep Round 1 quality and Round 2 fit scorecards separate. Overall scores are optional only when requested; gates still override averages.
 
 Use [the review template](references/review-template.md) for substantial evaluations; compress it for simple requests without dropping the separation or evidence limits. Read [category checks](references/category-checks.md) only for relevant categories. Recommendations to patch or publish do not themselves authorize those actions.
 
