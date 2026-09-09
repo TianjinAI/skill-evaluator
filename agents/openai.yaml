@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Evaluator"
+  short_description: "Independent skill reviews and tailored adoption decisions"
+  default_prompt: "Use $skill-evaluator to review this package independently, then assess its fit for my workflow."
