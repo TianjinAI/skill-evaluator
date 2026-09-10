@@ -1,5 +1,26 @@
 # Validation and limitations
 
+## Version 1.4.3
+
+- Independently inspected WorkBuddy's local handoff, archive and patch against the published ecosystem revision. The patch preserves the entrypoint and ecosystem rubric; the example's reverted Round 2 title was restored during review.
+- The supplied archive contained AppleDouble `._*` metadata files and failed the Markdown-link test when extracted. Applied the reviewed source patch instead and excluded metadata from the release archives.
+- Corrected prose rendering that removed negative signs (for example `-74` became `74`), rejected bands excluding their point score, and clarified that missing evidence remains NE rather than a placeholder score. Updated version declarations and synchronized the embedded Chinese introduction.
+- All 26 local tests passed, including new regression checks for signed numbers/literal punctuation, band containment and non-text prose. Skill frontmatter validation and whitespace checks passed. Release archives are generated from tracked Git content and checked after extraction.
+- WorkBuddy reported desktop/mobile visual checks for its earlier renderer in the handoff; this review did not independently reproduce those checks. No new visual or print verification is claimed for the corrected renderer. The local-file browser restriction recorded under 1.4.0 remains a limitation of this review.
+
+## Versions 1.4.1–1.4.2
+
+Recorded together: both changes came from the same review cycle, from defects a user reported while reading a delivered report, and neither was released independently. The `band` field and the score/confidence wording are 1.4.1; the prose rendering and round-heading fixes are 1.4.2.
+
+- Two defects were reported by a user reading a delivered report, and both were fixed in the package rather than only in that report:
+  - The renderer escaped authored emphasis and collapsed every newline, so structured review notes were delivered as one unformatted paragraph. Fixed by adding a narrow inline contract (`**bold**`, `` `code` ``, everything else escaped) and line-based prose rendering. No heading, link or raw-HTML pass-through was added; a regression test asserts that `<script>` and `<img>` in prose stay escaped text.
+  - A round title that repeated its own `Round N` prefix rendered as "Round 1 · Round 1 · …". The renderer now rejects that input instead of silently double-prefixing.
+- Added an optional `band` field (`"2–4"`), printed beside the point score as `3 (2–4)`, validated as ascending whole numbers 1–5 and rejected for NE/NA. Documented as a reasoned reachable-anchor interval, explicitly not a confidence interval or probability.
+- Added an optional `scorecard_note` so the score/confidence convention sits with the table it explains.
+- All 23 automated tests passed locally (up from 17): the six additions cover score bands and their rejection cases, prose lines and inline markers, prose markup pass-through, round-heading validation and scorecard-note placement.
+- WorkBuddy’s handoff reports visual QA at 1280 px and 390 px in Chrome, covering summary blocks, the scorecard and narrow-layout table scrolling. This is contributor-reported evidence, not independently reproduced here; print styling remains visually unverified.
+- The prose fixes are a rendering change plus a documentation rule, not a change to scoring anchors or category definitions. Whether the revised structure actually improves comprehension for other readers has not been measured; that remains a judgment, not a result.
+
 ## Version 1.4.0
 
 - Reviewed one user-supplied WorkBuddy output and its visible tool trace from the earlier evaluator. Observations informed intake timing, evidence calibration, coverage reporting and overlap reasoning. The private transcript/inventory are not bundled.

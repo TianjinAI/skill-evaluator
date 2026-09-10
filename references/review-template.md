@@ -8,7 +8,10 @@ Scale detail to the decision. Use two visibly separate rounds; omit Round 2 when
 - Main purpose, package type, intended audience, features, architecture.
 - Underlying thesis, values, assumptions, counterexamples and revisability; architecture and doctrine-to-mechanism mapping.
 - Strengths, tradeoffs, plausible alternatives and proposed incremental value.
-- Generic category scorecard: score 1–5/NE/NA | confidence | evidence | scope | rationale.
+- Write each block as conclusion-first lines, not one undifferentiated paragraph: the reader should get the verdict from the first line and the evidence from the lines under it. Do not restate the round verdict in narrative prose; the verdict line already carries it.
+- Generic category scorecard: score 1–5/NE/NA | confidence as `level — reason` | evidence | scope | rationale.
+- State the score/confidence convention in one line next to the scorecard: confidence is certainty in the score, not the score's magnitude, so low-score-high-confidence and mid-score-low-confidence are both normal.
+- Where the number is soft, print a reasoned interval beside it (`3 (2–4)`) and say whether it is a point estimate with a wide band or a one-sided bound. Do not signal provisional status with italics or colour.
 - Findings: severity | confidence/evidence label | trigger | behavior | consequence | evidence location | remedy.
 - Distinguish fixable defects, inherent limitations, and author conventions.
 - Applicable gates: result, evidence, scope, unresolved question.
@@ -24,7 +27,7 @@ Scale detail to the decision. Use two visibly separate rounds; omit Round 2 when
 - Ecosystem fit and synergy: complementary capabilities, gaps filled, handoffs and consolidation opportunities; expected benefits versus demonstrated outcomes.
 - Existing alternatives and incremental value for this user.
 - User requirement → check → expected/actual result → status/evidence; distinguish assessed-only fit from task-validated suitability.
-- Separate fit scorecard using the six Round 2 categories; include confidence, evidence, scope and rationale.
+- Separate fit scorecard using the six Round 2 categories; include confidence as `level — reason`, evidence, scope and rationale.
 - Decision: adopt / trial with conditions / adapt before use / skip for this use case.
 - Pilot acceptance criteria, actual results if tested, next action, residual uncertainty.
 

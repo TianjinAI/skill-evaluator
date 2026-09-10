@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.4.3 — Clearer reports and ecosystem assessment
+
+- Retain the published Round 2 ecosystem suitability and synergy assessment across instructions, rubrics, templates and examples.
+- Integrate the unreleased 1.4.1–1.4.2 changes below: optional reasoned score bands, explicit confidence explanations, structured prose and scorecard notes.
+- Preserve negative numbers and literal punctuation in prose; require score bands to contain their point score. Missing evidence remains NE, never a guessed midpoint.
+- Synchronize English/Chinese version information and the embedded Chinese README; exclude macOS metadata from release archives.
+- 26 local tests passed. Contributor-reported visual checks are distinguished from independent validation.
+
+## 1.4.2 — Readable prose, not formatted walls
+
+- Render authored prose as structured lines: newline-driven breaks, bullet list lines, subordinate lines, block labels and inline code. Narrow escaping-preserving contract; no heading, link or raw-HTML pass-through, so markup cannot be smuggled through prose fields.
+- Add an optional `scorecard_note` so the score/confidence convention sits with the table it explains instead of only in the round summary.
+- Reject a round title that repeats its own `Round N` prefix, which rendered as "Round 1 · Round 1 · …".
+- Record the distinction between styling and structure: the same undifferentiated paragraph with bold added is still unreadable. Sections must lead with the conclusion and must not restate the round verdict. Applied to the template, HTML delivery contract and completion check.
+- Caught by a user reading a delivered report; no scoring anchors or category definitions changed.
+
+## 1.4.1 — Confidence is not the score
+
+- Require every confidence cell to render as `level — reason`; a bare high/medium/low fails the completion check.
+- State the score/confidence convention next to each scorecard: confidence is certainty in the number, not the number's magnitude. A reader who saw 2/high and 3/low as contradictions was reading a column the report left ambiguous.
+- Add an optional `band` field to the renderer, printed beside the point score as `3 (2–4)`, so a soft number is legible in plain text. Bands are validated (ascending 1–5, numeric scores only) and are documented as a reasoned reachable-anchor interval, not a confidence interval.
+- Separate "point estimate with a wide band" from "one-sided bound" in the scoring guidance, and reject font styling (italics, weight, colour) as a provisional marker because it does not survive plain-text export, screen readers or greyscale printing.
+- Applied to the scoring rubric, review template, completion check and HTML delivery contract. No scoring anchors or category definitions changed.
+
 ## 1.4.0 — Upfront intake, HTML and evidence calibration
 
 - Gather necessary context before findings; deliver selected rounds together without routine mid-review questionnaires.

@@ -28,11 +28,12 @@
     "scorecard": [
       {
         "category": "Purpose and scope",
-        "score": "NE",
+        "score": 3,
         "confidence": "Low \u2014 fixture only",
         "evidence": "E0",
         "scope": "Fictional layout example",
-        "rationale": "No candidate inspected; this is not a grade."
+        "rationale": "No candidate inspected. The number and its interval exist only to demonstrate scorecard layout, including the optional band field; this is not a grade.",
+        "band": "2\u20134"
       },
       {
         "category": "Philosophy and reasoning",
@@ -144,7 +145,8 @@
         "id": "E0",
         "label": "Fictional demonstration; no empirical evidence"
       }
-    ]
+    ],
+    "scorecard_note": "Score is an ordinal judgment; confidence describes certainty in that judgment, not its magnitude. A band shows plausible rubric anchors, not a statistical confidence interval."
   },
   "round2": {
     "title": "User ecosystem suitability and synergy assessment",
@@ -233,6 +235,7 @@
         "id": "E0",
         "label": "Fictional user; no inventory or trial evidence"
       }
-    ]
+    ],
+    "scorecard_note": "Score is an ordinal judgment; confidence describes certainty in that judgment, not its magnitude. A band shows plausible rubric anchors, not a statistical confidence interval."
   }
 }

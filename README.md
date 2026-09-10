@@ -8,7 +8,7 @@
 
 Skill Evaluator is a public, MIT-licensed agent skill for reviewing skills, plugins, and related tools. It separates package quality from personal suitability, supports evidence-backed comparisons, and gives you a clear adoption decision without inventing precision.
 
-**Current version: 1.4.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
+**Current version: 1.4.3.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
 
 ## One intake, one complete report
 
@@ -149,7 +149,7 @@ This creates separate generic and personal drafts, a CSV evidence ledger and a p
 
 ## Validation and limits
 
-The package includes automated tests for both helpers, HTML escaping, export separation, score validation, overwrite protection and relative documentation links. Run them with:
+The package includes automated tests for both helpers, HTML escaping, prose and inline-marker rendering without markup pass-through, score and score-band validation, export separation, round-heading validation, overwrite protection and relative documentation links. Run them with:
 
 ```sh
 python3 -m unittest discover -s tests -v
@@ -175,7 +175,7 @@ Contributions should improve an actual review decision with evidence or a reprod
 
 [English ↑](#english) · [中文独立页面](README.zh-CN.md) · [安装指南](docs/INSTALLATION.md) · [使用指南](docs/USAGE.md) · [版本下载](https://github.com/TianjinAI/skill-evaluator/releases)
 
-这是一个公开、MIT 许可的 Agent Skill，用于评估技能、插件及相关应用。当前版本 **1.4.0**。核心指令不需要 API Key 或额外运行库；可选的评估目录生成器需要 Python 3.10+。
+这是一个公开、MIT 许可的 Agent Skill，用于评估技能、插件及相关应用。当前版本 **1.4.3**。核心指令不需要 API Key 或额外运行库；可选的评估目录生成器需要 Python 3.10+。
 
 ## 一次前置澄清，一次完整交付
 
@@ -246,11 +246,12 @@ Contributions should improve an actual review decision with evidence or a reprod
 - 可编辑模板：两轮报告、CSV 证据记录、试用计划与实际结果。
 - 完整虚构案例：同一通用基线，对两个用户产生不同适配结论。
 - 可选目录生成脚本：只创建草稿，不联网、不执行候选、拒绝覆盖已有目录。
+- 可选报告渲染脚本：把撰写好的评估 JSON 渲染为独立离线 HTML（无脚本、无 CDN、无遥测），默认只导出元数据与第一轮，加 `--include-round-2` 才含私密的第二轮。详见 [HTML 交付](references/html-delivery.md)。
 - 测试、CI、贡献指南、隐私说明与行为评测方案。
 
 ## 证据边界
 
-区分「作者宣称」「源码支持」「本地检查」「端到端任务验证」「未知」。结构检查通过不代表建议正确，测试计划也不是测试结果。自动测试覆盖目录生成器和文档链接；跨 Agent 的行为效果仍需要实际验证。完整记录见 [VALIDATION](VALIDATION.md)。
+区分「作者宣称」「源码支持」「本地检查」「端到端任务验证」「未知」。结构检查通过不代表建议正确，测试计划也不是测试结果。自动测试覆盖目录生成器、报告渲染器与文档链接；跨 Agent 的行为效果仍需要实际验证。完整记录见 [VALIDATION](VALIDATION.md)。
 
 公开第一轮前排除私人信息；第二轮资料默认按私人草稿管理。技能本身不添加遥测或后台服务，但主机、模型和工具仍有各自的数据处理方式。
 
