@@ -26,12 +26,12 @@ A well-designed tool can be wrong for your environment. A convenient tool can st
 flowchart TD
     A[Candidate and available evidence] --> B[Round 1: independent generic review]
     B --> C[Reusable package baseline]
-    C --> D[Round 2: user-specific suitability test]
+    C --> D[Round 2: ecosystem suitability and synergy]
     E[Use case, workflow and environment] --> D
     D --> F[Adopt, trial, adapt or skip]
 ```
 
-| | Round 1: generic screening/assessment | Round 2: suitability test |
+| | Round 1: generic screening/assessment | Round 2: ecosystem suitability and synergy |
 |---|---|---|
 | Main question | Does it credibly deliver its stated purpose? | Does it improve this user's actual work? |
 | Inputs | Package, declared audience, implementation and evidence | Round 1 baseline plus user context and alternatives |
@@ -41,9 +41,9 @@ flowchart TD
 
 For example, Mac-only support belongs in the generic scope assessment. Whether it rules out adoption for a Windows user belongs in Round 2. A broken export remains a defect for both users. See the [complete fictional example](examples/two-users.md).
 
-## Round 2 checks skills you already have installed
+## Round 2: Suitability and synergy with your agent-skill ecosystem
 
-Round 1 evaluates the candidate generically, including its philosophy and architecture. Round 2 tests its suitability for **your use case, workflow and environment**. As part of that review, it screens skills you already have installed for overlap, duplication, complementary capabilities and potential conflicts.
+Round 1 evaluates the candidate generically, including its philosophy and architecture. Round 2 assesses how the candidate fits and improves **your use case and existing agent-skill ecosystem**: your agents, installed skills, tools and integrations, workflows, working environment and constraints. It examines task/output fit, complementary capabilities, useful handoffs, gaps it can fill, consolidation opportunities, operating costs and adoption effort. Overlap, duplication and potential conflicts are one part of this broader assessment. Synergy is a hypothesis until supported by an explicit handoff or task check; existing skills are not required to complete Round 2.
 
 **This does not mean installing the candidate skill.** The installed-skill check is read-only. Installing the evaluator itself (see Quick start below) is a separate setup step; installing or activating any candidate requires your authorization and is not an automatic part of Round 2.
 
@@ -187,7 +187,7 @@ Contributions should improve an actual review decision with evidence or a reprod
 
 ## 两轮明确分开
 
-| | 第一轮：独立通用评估 | 第二轮：用户适用性测试 |
+| | 第一轮：独立通用评估 | 第二轮：用户生态适配与协同评估 |
 |---|---|---|
 | 核心问题 | 工具能否可信地完成它宣称的用途？ | 它是否值得用于这位用户的实际工作？ |
 | 依据 | 声明的用户群、功能、设计、源码、测试和证据 | 第一轮基线，加上用户任务、流程、环境和约束 |
@@ -206,9 +206,9 @@ Contributions should improve an actual review decision with evidence or a reprod
 
 每个分数需给出证据、置信度、评估范围和理由。证据不足记 NE，不适用记 NA，不机械打中间分。必要条件失败不能被高平均分掩盖；两轮不合并成一个分数。分数是有锚点的专业判断，不是假装客观测量。详见 [评分标准](references/scoring.md)。
 
-## 第二轮增加已安装技能的重叠检查
+## 第二轮：用户 Agent 技能生态的适配与协同评估
 
-第一轮是通用筛查与评估；第二轮针对实际用途、工作流和工作环境做适用性测试，包含已有技能的重复、替代、部分重叠、互补以及触发冲突检查。
+第一轮是通用筛查与评估；第二轮考察候选技能是否适合并能改善用户现有的 Agent 技能生态，包括 Agent、已安装技能、工具与集成、工作流程、运行环境和约束。评估任务与产出适配、能力互补、流程衔接、能力缺口、整合机会、运行成本和采用代价。重复、重叠及冲突检查只是其中一部分。协同收益需要具体的衔接或任务检查来支持；没有已安装技能也可以进行第二轮评估。
 
 **这里指只读检查已经安装的技能，不是替用户安装候选技能。** 安装评估器本身是下文的独立设置步骤；安装或启用任何被评估候选都需要用户授权，不是第二轮的自动操作。
 

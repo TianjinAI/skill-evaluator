@@ -1,6 +1,8 @@
-# Round 2: User-specific suitability test
+# Round 2: User ecosystem suitability and synergy assessment
 
-Question: For this user's actual work and environment, does the candidate improve outcomes enough to justify its costs and constraints?
+Question: Does the candidate fit the user's tasks and agent-skill ecosystem, and can it improve their combined outcomes enough to justify its costs and constraints?
+
+The ecosystem includes agents, skills, tools/integrations, workflows and operating constraints. Assess complementarity, useful handoffs, gaps filled and consolidation benefits alongside compatibility and duplication. For each material synergy claim, identify the participating capabilities, input/output handoff, expected benefit, dependencies and observed or still-needed validation. No installed inventory does not prevent task/environment fit assessment; mark ecosystem coverage accordingly.
 
 ## Establish the profile
 

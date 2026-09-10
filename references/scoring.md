@@ -48,7 +48,7 @@ Use the common scale relative to explicit user requirements. A 1 means a central
 | Environment compatibility | Host tools, OS/architecture, dependencies, permissions and integration paths |
 | Data and authority fit | Approved providers, retention, sensitivity, write scope and reversibility |
 | Cost and operating fit | Budget, time, attention, maintenance capacity and switching burden |
-| Value over existing alternatives | Evidence of benefit over the current workflow and installed skills, accounting for substitutes, duplication, complementary value and migration cost |
+| Value over existing alternatives | Evidence of benefit over the current workflow and installed skills, accounting for substitutes, duplication, complementary value, handoff quality, gaps filled, consolidation benefits and migration cost |
 
 Use [installed-skill overlap](installed-skill-overlap.md) as evidence, with coverage limits. Unavailable inventory is an uncertainty, not proof of uniqueness or a score of 1.
 

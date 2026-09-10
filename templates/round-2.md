@@ -1,4 +1,4 @@
-# Round 2 — User-specific suitability test
+# Round 2 — User ecosystem suitability and synergy assessment
 
 Status: DRAFT — private context; not approved for publication
 
@@ -57,3 +57,10 @@ Choose and justify: adopt / trial with conditions / adapt before use / skip for 
 Mandatory conditions versus optional preferences:
 
 Smallest useful next step, pilot reference if applicable, unresolved context:
+
+## Ecosystem synergy
+
+| Capability or gap | Existing agent/skill/tool | Proposed handoff or consolidation | Expected benefit | Evidence and validation still needed |
+|---|---|---|---|---|
+
+Assess task fit even if no installed skills are available. Record uncertainty; do not assume that complementary features guarantee a working integration.
