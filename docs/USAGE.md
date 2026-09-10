@@ -1,6 +1,6 @@
 # Usage guide
 
-## Start with a request, not a questionnaire
+## Start with a request and a compact upfront intake
 
 Give the agent a repository URL, local folder, skill text, or release page. It should use the skill in your language. Request a depth if you care; otherwise it chooses a scope proportional to your decision.
 
@@ -55,3 +55,7 @@ Use the [design guide](../references/design-and-doctrine.md) and [score anchors]
 - **Task-validated** applies to a named task and environment, not every claimed feature.
 
 See the [worked example](../examples/two-users.md) for two different decisions from the same baseline. For updates and comparisons, see [reassessment guidance](../references/comparison-and-reassessment.md).
+
+## Complete HTML delivery
+
+For standard/deep reviews, the default is one local HTML report and a brief chat verdict/link. Necessary questions come before findings; the two rounds remain analytically separate. Use the [HTML delivery guide](../references/html-delivery.md) and optional `scripts/render_report.py`. An explicit request for Markdown or a quick inline screen takes precedence. The renderer does not create evidence or publish files.

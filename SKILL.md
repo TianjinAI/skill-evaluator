@@ -13,6 +13,10 @@ Accept repository links, local packages, skill text, release pages, or an existi
 
 For substantial work, read [evidence practice](references/evidence-practice.md). For comparisons or a changed release, read [comparison and reassessment](references/comparison-and-reassessment.md). Answer in the user's language; do not inherit the candidate author's tone or language constraints.
 
+## Intake before findings
+
+Read [intake and completion](references/intake-and-completion.md) before choosing rounds. Reuse context already supplied. For an open-ended evaluation with no use case, ask one compact upfront question about generic-only versus adoption/replacement and the decision-changing task/environment gaps. Do independent source inspection while waiting, but do not deliver a finished Round 1 and then start a routine questionnaire. Explicit generic-only requests need no personal intake. Once context is sufficient, complete the selected rounds in one delivery; keep their judgments independent. Missing optional details become labeled assumptions/NE, not repeated interruptions. New authorization or genuinely blocking discoveries can still require a focused question.
+
 ## Two independently deliverable rounds
 
 **Round 1 — Generic screening and assessment.** Assess the package against its declared purpose and reasonable expectations for its category. Read [the generic rubric](references/round-1.md). Standard/deep reviews also use [design and doctrine](references/design-and-doctrine.md) to assess the underlying thesis, assumptions, causal reasoning, architecture and tradeoffs—not just whether the package runs. Produce a reusable baseline without relying on the current user's preferences, tools, account details, or willingness to accept risk. Record the reviewed version and inspection scope. Generic does not mean context-free: the author's stated audience and supported environments belong here.
@@ -20,8 +24,8 @@ For substantial work, read [evidence practice](references/evidence-practice.md).
 **Round 2 — User-specific suitability test.** Start from a completed Round 1 and read [the suitability rubric](references/round-2.md). Test the candidate against the user's use case, workflow, actual environment, installed capabilities and acceptance criteria. Include the [installed-skill overlap check](references/installed-skill-overlap.md) using available authorized read-only metadata; inspect likely matches only. Record unavailable/partial inventory coverage. Separate assessed compatibility from executed tests and do not call a static fit opinion a passed suitability test. Keep this as a separate assessment linked to the baseline. A poor fit does not retroactively make the package defective, and a good fit does not erase a baseline defect.
 
 Routing:
-- "Evaluate this" with no use context: complete Round 1. Offer Round 2 with one concise request for the missing context; do not block Round 1 or invent a profile.
-- Both rounds requested, or evaluation explicitly for a known use case: complete Round 1 first, then Round 2 using available context. Ask only about gaps that could change the decision; mark any remaining assumptions.
+- "Evaluate this" with no use context: use the upfront intake above. If the user declines context or requests no questions, complete Round 1 and mark Round 2 not assessed; do not invent a profile or end with a routine Round 2 question.
+- Both rounds requested, or evaluation explicitly for a known use case: collect decision-changing gaps upfront, then analyze Round 1 first and Round 2 second using available context. Deliver them together; mark remaining assumptions.
 - Only a generic review requested: stop after Round 1.
 - Only a fit review requested: reuse an existing baseline if its version/scope remain applicable. Otherwise do the minimum missing baseline work, clearly labeled, before making the fit decision.
 - Comparisons: assess each candidate independently before comparing them on the same criteria. Different package types need different expectations.
@@ -53,4 +57,6 @@ Round 2 ends with **adopt / trial with conditions / adapt before use / skip for 
 
 Use [the review template](references/review-template.md) for substantial evaluations; compress it for simple requests without dropping the separation or evidence limits. Read [category checks](references/category-checks.md) only for relevant categories. Recommendations to patch or publish do not themselves authorize those actions.
 
-For saved deliverables, copy only the useful files from [templates](templates/README.md). The optional `scripts/init_review.py` creates a new review folder without installing or running the candidate; its instructions are in the [usage guide](docs/USAGE.md). Never fill a blank template with invented evidence. Inline answers remain appropriate for short reviews.
+For substantial evaluations, deliver a standalone local HTML report by default plus a short chat verdict/link, unless the user asks for another format. Read [HTML delivery](references/html-delivery.md); keep personal Round 2 out of generic exports. Run the [completion check](references/intake-and-completion.md) before delivery. If file creation is unavailable, provide the complete report inline and disclose that HTML was not generated. Do not publish reports merely because the evaluator is public.
+
+For supporting working notes, copy only the useful files from [templates](templates/README.md). The optional `scripts/init_review.py` creates a new review folder without installing or running the candidate; its instructions are in the [usage guide](docs/USAGE.md). Never fill a blank template with invented evidence. Inline answers remain appropriate for short reviews.

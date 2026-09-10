@@ -47,3 +47,5 @@ Keep the inventory and paths in the private Round 2 context unless disclosure is
 Read-only filesystem access does not mean entirely local processing: text read by a cloud-hosted agent may enter that provider's context. Respect the user's approved-provider/offline requirements before reading content. If that conflicts with available tooling, use user-supplied sanitized metadata or mark the check blocked. A private-draft label is not encryption or access control.
 
 Deliver an overlap table with capability/package label, availability evidence, relation, distinct value, conflict risk, recommendation and confidence. State inventory scope, omissions and whether any real task was executed.
+
+Metadata-only coverage supports a shortlist, not a full replacement verdict. Inspect the relevant instruction bodies for the strongest substitutes before judging defaults, output formats or integration costs. If access is limited, state “potential overlap; comparative quality not established.” Weigh consolidation benefits as well as duplication costs, and distinguish inferred preferences from user-confirmed requirements.

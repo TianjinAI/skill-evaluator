@@ -6,7 +6,15 @@
 
 Skill Evaluator is a public, MIT-licensed agent skill for reviewing skills, plugins, and related tools. It separates package quality from personal suitability, supports evidence-backed comparisons, and gives you a clear adoption decision without inventing precision.
 
-**Current version: 1.3.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
+**Current version: 1.4.0.** The core instructions need no API key or Python dependency. An optional review-folder helper uses Python 3.10+ and the standard library.
+
+## One intake, one complete report
+
+For an open-ended evaluation, the agent asks the necessary scope/use-case questions **upfront**, reuses context already provided, and continues independent inspection while waiting. It then delivers the selected rounds together. Explicit generic-only requests need no personal questionnaire. Optional gaps become labeled assumptions or unknowns; new authorization or genuinely blocking discoveries can still require a question.
+
+Standard/deep reviews now produce a **standalone HTML report** by default, with evidence links, separate scorecards, gates and test coverage. A brief chat response links to the actual file. Reports work offline and include print styling. Combined reports containing Round 2 stay private; the default renderer export excludes that section. HTML creation is not web publication. [HTML guide](references/html-delivery.md) · [Fictional layout input](examples/report-input.json)
+
+> Evaluate this skill for replacing my current workflow. Ask any necessary questions upfront, then complete both rounds in one HTML report. Keep the generic assessment independent and mark what was not tested.
 
 ## Why two rounds?
 
@@ -61,7 +69,7 @@ For both:
 
 > Evaluate these two skills independently, then compare them for my existing workflow. Keep generic defects separate from personal preferences and say what you actually tested.
 
-Natural-language invocation works only if the host discovers the skill; explicit syntax varies by host. See [installation and WorkBuddy guidance](docs/INSTALLATION.md). Native WorkBuddy execution has not been validated here.
+Natural-language invocation works only if the host discovers the skill; explicit syntax varies by host. See [installation and WorkBuddy guidance](docs/INSTALLATION.md). A user-supplied WorkBuddy execution trace informed version 1.4.0; the revised workflow has not yet been rerun in WorkBuddy.
 
 ## What it does
 
@@ -102,7 +110,7 @@ Every score includes confidence, evidence, scope and rationale. **NE** means not
 | Standard | Relevant source paths, dependencies, instructions and useful targeted checks |
 | Deep | Behavioral trials, failure cases and matched comparisons when warranted and authorized |
 
-A deep review is not automatically a penetration test, installation request or permission to use real accounts. A simple review need not create files or fill every template.
+A deep review is not automatically a penetration test, installation request or permission to use real accounts. Quick screening may stay inline; standard/deep reviews default to a local HTML report.
 
 ## Understand the verdict
 
@@ -139,7 +147,7 @@ This creates separate generic and personal drafts, a CSV evidence ledger and a p
 
 ## Validation and limits
 
-The package includes automated tests for the initializer's filesystem behavior and relative documentation links. Run them with:
+The package includes automated tests for both helpers, HTML escaping, export separation, score validation, overwrite protection and relative documentation links. Run them with:
 
 ```sh
 python3 -m unittest discover -s tests -v

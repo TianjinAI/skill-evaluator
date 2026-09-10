@@ -4,7 +4,15 @@
 
 [English](README.md) · [安装指南](docs/INSTALLATION.md) · [使用指南](docs/USAGE.md) · [版本下载](https://github.com/TianjinAI/skill-evaluator/releases)
 
-这是一个公开、MIT 许可的 Agent Skill，用于评估技能、插件及相关应用。当前版本 **1.3.0**。核心指令不需要 API Key 或额外运行库；可选的评估目录生成器需要 Python 3.10+。
+这是一个公开、MIT 许可的 Agent Skill，用于评估技能、插件及相关应用。当前版本 **1.4.0**。核心指令不需要 API Key 或额外运行库；可选的评估目录生成器需要 Python 3.10+。
+
+## 一次前置澄清，一次完整交付
+
+开放式评估先集中询问必要的用途、流程和环境问题，复用已有上下文；等待回答时可以继续独立查阅。随后一次交付所选两轮，避免第一轮输出后再开始常规问卷。明确只要通用评估时不问个人问题。非关键缺口标注假设或 NE；新的必要授权或真正阻塞问题仍可询问。
+
+标准/深入评估默认生成可离线阅读和打印的 **HTML 报告**，聊天只给简短结论和文件链接。两轮评分卡、证据、必要条件和实际测试覆盖分别展示。默认导出只有通用第一轮；包含第二轮时明确标记私人内容，不自动公开。详见 [HTML 交付](references/html-delivery.md)。
+
+> 请评估这个技能能否替换我的现有工作流。必要问题在开始时集中问，然后一次交付完整的两轮 HTML 报告，明确证据等级和未测试项。
 
 ## 两轮明确分开
 
@@ -45,7 +53,7 @@
 
 **https://github.com/TianjinAI/skill-evaluator**
 
-要求保留完整目录，特别是 `SKILL.md`、`references/`、`templates/` 与 `scripts/`。已存在同名技能时先保留自定义修改。可从 Releases 下载带校验值的 ZIP。不同主机的安装位置不同；WorkBuddy 原生流程尚未实测，详见安装指南。
+要求保留完整目录，特别是 `SKILL.md`、`references/`、`templates/` 与 `scripts/`。已存在同名技能时先保留自定义修改。可从 Releases 下载带校验值的 ZIP。不同主机的安装位置不同；1.4.0 已参考用户提供的 WorkBuddy 执行记录改进；新版尚未在 WorkBuddy 复跑，详见安装指南。
 
 第一轮示例：
 

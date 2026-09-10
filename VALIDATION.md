@@ -1,5 +1,15 @@
 # Validation and limitations
 
+## Version 1.4.0
+
+- Reviewed one user-supplied WorkBuddy output and its visible tool trace from the earlier evaluator. Observations informed intake timing, evidence calibration, coverage reporting and overlap reasoning. The private transcript/inventory are not bundled.
+- All 17 automated package/renderer tests passed locally: initializer behavior and relative links plus text escaping, unsafe source URL rejection, score/provenance validation, Unicode/tables, generic/private export separation, overwrite/symlink protection and invalid-input handling.
+- Both generic and combined HTML files were generated using the CLI. The skill frontmatter validator and whitespace check passed.
+- Browser visual QA was attempted but blocked by the browser URL security policy for local files. Desktop/mobile/print rendering remains visually unverified; print and responsive styles are included, not claimed tested.
+- Manually walked the upfront intake and completion rules against the observed trace. No independent agent benchmark or revised WorkBuddy rerun has been performed; regression scenarios remain prospective.
+
+Earlier sections below are historical records; 1.4.0 supersedes the former offer-Round-2-afterward routing.
+
 ## Version 1.3.0
 
 - All 10 existing package/helper tests passed; skill frontmatter, local references and whitespace checks passed.

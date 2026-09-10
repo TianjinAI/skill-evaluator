@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.0 — Upfront intake, HTML and evidence calibration
+
+- Gather necessary context before findings; deliver selected rounds together without routine mid-review questionnaires.
+- Default substantial reviews to offline HTML; add an escaped-text renderer with separate generic/private exports and score validation.
+- Tighten primary-source verification, inspection coverage, preference provenance and potential-versus-observed overlap claims.
+- Add a completion check for scorecards, acceptance matrices, design/doctrine substance and proportionate verdicts.
+- Incorporate lessons from a user-provided WorkBuddy run without publishing its private transcript or inventory. Revised WorkBuddy behavior remains to be retested.
+
 ## 1.3.0 — Suitability testing and installed-skill overlap
 
 - Clarified Round 1 as generic screening/assessment and Round 2 as user-specific suitability testing.

@@ -24,7 +24,7 @@ Download the ZIP and matching `.sha256` file from [Releases](https://github.com/
 
 > 请通过你支持的技能安装方式，从 https://github.com/TianjinAI/skill-evaluator 安装完整的 skill-evaluator 目录。先检查是否有同名版本，保留自定义修改。完成后报告实际安装位置和能否读取 SKILL.md 及其 references。不要运行被评估候选的安装脚本。接着用这个技能对一个公开仓库做第一轮通用审查，不要自动安装候选技能。
 
-WorkBuddy-specific UI, paths, discovery and execution have not been tested in this repository. Successful download is distinct from skill discovery and from a successful evaluation.
+A user-supplied WorkBuddy trace demonstrated discovery and execution of the earlier skill and informed 1.4.0. The revised workflow has not yet been rerun in WorkBuddy; UI and installation procedures remain host-dependent. Successful download is distinct from skill discovery and from a successful evaluation.
 
 ## Dependencies and permissions
 

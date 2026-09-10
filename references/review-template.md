@@ -28,3 +28,5 @@ Scale detail to the decision. Use two visibly separate rounds; omit Round 2 when
 - Pilot acceptance criteria, actual results if tested, next action, residual uncertainty.
 
 When publishing, separate public baseline from private fit notes. Do not include personal context or copied confidential inputs in a public example.
+
+For standard/deep reviews, render this content as [HTML](html-delivery.md) and apply the [completion check](intake-and-completion.md). Collect essential Round 2 context upfront rather than appending a routine questionnaire after the generic findings.

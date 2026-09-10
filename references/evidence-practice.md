@@ -45,3 +45,7 @@ Stop when evidence is sufficient for the stated decision, budget is reached, or 
 ## Fair public reviews
 
 Credit strengths, state review date and revision, distinguish publisher intent from observed behavior, and link actionable evidence. Do not use popularity as effectiveness evidence or a personality critique as an implementation finding. Sensitive exploit details or private data should be handled through a suitable private disclosure route, not copied into a public example.
+
+## Provenance and inspection coverage
+
+For decisive external claims, trace to an exact primary source/version when available. Repeated secondary claims may share an origin; count distinct provenance, not URLs. Reading a search result is not inspecting its underlying code. A historical open-source constant does not establish the current production algorithm. Preserve these distinctions in gates, scores and recommendations. Report fully read, sampled and uninspected files separately; file counts, trees and line counts establish inventory only.

@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "title": "Example review \u2014 fictional layout fixture",
+    "candidate": "Example Skill",
+    "revision": "No real revision",
+    "date": "Example date",
+    "scope": "Layout demonstration only",
+    "language": "en"
+  },
+  "round1": {
+    "title": "Independent generic assessment",
+    "verdict": "Evidence insufficient \u2014 demonstration, not an evaluation",
+    "summary": "This fixture demonstrates a complete scorecard without inventing evidence. Replace every field with observations before delivering a real review.",
+    "sections": [
+      {
+        "title": "Purpose, doctrine and architecture",
+        "paragraphs": [
+          "No real package has been inspected. A review would reconstruct the thesis, challenge its assumptions, and trace inputs, routing, state, outputs and recovery."
+        ]
+      },
+      {
+        "title": "Findings and limits",
+        "bullets": [
+          "No tests ran. No effectiveness, security or compatibility claim is established."
+        ]
+      }
+    ],
+    "scorecard": [
+      {
+        "category": "Purpose and scope",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Philosophy and reasoning",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Design and architecture",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Instruction quality",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Functional correctness",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Reliability and recovery",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Authority, security and privacy",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Evidence and validation",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Efficiency and maintainability",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Incremental value",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      }
+    ],
+    "gates": {
+      "headers": [
+        "Gate",
+        "Status",
+        "Evidence / scope"
+      ],
+      "rows": [
+        [
+          "Correctness",
+          "Unknown",
+          "E0 \u2014 no inspected candidate"
+        ]
+      ]
+    },
+    "checks": {
+      "headers": [
+        "Check",
+        "Expected",
+        "Actual",
+        "Status",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "Representative output",
+          "Meets declared postconditions",
+          "Not run",
+          "Not tested",
+          "E0"
+        ]
+      ]
+    },
+    "sources": [
+      {
+        "id": "E0",
+        "label": "Fictional demonstration; no empirical evidence"
+      }
+    ]
+  },
+  "round2": {
+    "title": "User-specific suitability",
+    "verdict": "Assessed only \u2014 suitability not task-validated",
+    "summary": "Fictional user wants to reduce tool handoffs. No actual user or installed inventory is represented.",
+    "sections": [
+      {
+        "title": "Requirements and overlap",
+        "paragraphs": [
+          "A real report would identify the source of each requirement and compare likely substitutes beyond their names. Consolidation may be beneficial even when features overlap."
+        ]
+      }
+    ],
+    "scorecard": [
+      {
+        "category": "Task and output fit",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Workflow and philosophy alignment",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Environment compatibility",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Data and authority fit",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Cost and operating fit",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      },
+      {
+        "category": "Value over existing alternatives",
+        "score": "NE",
+        "confidence": "Low \u2014 fixture only",
+        "evidence": "E0",
+        "scope": "Fictional layout example",
+        "rationale": "No candidate inspected; this is not a grade."
+      }
+    ],
+    "checks": {
+      "headers": [
+        "Requirement",
+        "Check/input",
+        "Expected",
+        "Actual",
+        "Status",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "Fewer handoffs",
+          "Matched task comparison",
+          "Equal quality with fewer interventions",
+          "Not run",
+          "Not tested",
+          "E0"
+        ]
+      ]
+    },
+    "sources": [
+      {
+        "id": "E0",
+        "label": "Fictional user; no inventory or trial evidence"
+      }
+    ]
+  }
+}

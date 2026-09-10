@@ -15,7 +15,7 @@ Use information already provided. Record only what affects the decision, disting
 | Resources | Time, cost, model/API budget, maintenance capacity, preferred language |
 | Alternatives | Current workflow, plain agent baseline, already-installed capabilities, switching/migration cost |
 
-Ask about a missing requirement only if it could change the recommendation. Continue independent work while waiting when the host supports it. If critical context remains unavailable, provide a conditional fit assessment rather than an unconditional adoption decision. Do not make an entire questionnaire mandatory.
+Use [upfront intake](intake-and-completion.md) before delivering findings. Ask about a missing requirement only if it could change the recommendation. Continue independent work while waiting when the host supports it. If critical context remains unavailable, provide a conditional fit assessment rather than an unconditional adoption decision. Do not make an entire questionnaire mandatory.
 
 ## Check the actual environment and installed capabilities
 
