@@ -1,8 +1,10 @@
+<a id="english"></a>
+
 # Skill Evaluator
 
 **Understand a skill on its own merits. Then decide whether it fits your work.**
 
-[简体中文](README.zh-CN.md) · [Install](docs/INSTALLATION.md) · [Usage](docs/USAGE.md) · [Worked example](examples/two-users.md) · [Releases](https://github.com/TianjinAI/skill-evaluator/releases)
+[简体中文 ↓](#chinese) · [中文独立页面](README.zh-CN.md) · [Install](docs/INSTALLATION.md) · [Usage](docs/USAGE.md) · [Worked example](examples/two-users.md) · [Releases](https://github.com/TianjinAI/skill-evaluator/releases)
 
 Skill Evaluator is a public, MIT-licensed agent skill for reviewing skills, plugins, and related tools. It separates package quality from personal suitability, supports evidence-backed comparisons, and gives you a clear adoption decision without inventing precision.
 
@@ -162,3 +164,94 @@ The package adds no telemetry or background service. Your host and tools still d
 [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Issues](https://github.com/TianjinAI/skill-evaluator/issues) · [MIT license](LICENSE)
 
 Contributions should improve an actual review decision with evidence or a reproducible scenario. Public examples use fictional or sanitized inputs. The skill is host-neutral; product-specific integrations are documented only to the extent tested.
+
+---
+
+<a id="chinese"></a>
+
+# 中文说明：Skill Evaluator 技能评估器
+
+**先独立评价工具本身，再判断它是否适合你。**
+
+[English ↑](#english) · [中文独立页面](README.zh-CN.md) · [安装指南](docs/INSTALLATION.md) · [使用指南](docs/USAGE.md) · [版本下载](https://github.com/TianjinAI/skill-evaluator/releases)
+
+这是一个公开、MIT 许可的 Agent Skill，用于评估技能、插件及相关应用。当前版本 **1.4.0**。核心指令不需要 API Key 或额外运行库；可选的评估目录生成器需要 Python 3.10+。
+
+## 一次前置澄清，一次完整交付
+
+开放式评估先集中询问必要的用途、流程和环境问题，复用已有上下文；等待回答时可以继续独立查阅。随后一次交付所选两轮，避免第一轮输出后再开始常规问卷。明确只要通用评估时不问个人问题。非关键缺口标注假设或 NE；新的必要授权或真正阻塞问题仍可询问。
+
+标准/深入评估默认生成可离线阅读和打印的 **HTML 报告**，聊天只给简短结论和文件链接。两轮评分卡、证据、必要条件和实际测试覆盖分别展示。默认导出只有通用第一轮；包含第二轮时明确标记私人内容，不自动公开。详见 [HTML 交付](references/html-delivery.md)。
+
+> 请评估这个技能能否替换我的现有工作流。必要问题在开始时集中问，然后一次交付完整的两轮 HTML 报告，明确证据等级和未测试项。
+
+## 两轮明确分开
+
+| | 第一轮：独立通用评估 | 第二轮：用户适用性测试 |
+|---|---|---|
+| 核心问题 | 工具能否可信地完成它宣称的用途？ | 它是否值得用于这位用户的实际工作？ |
+| 依据 | 声明的用户群、功能、设计、源码、测试和证据 | 第一轮基线，加上用户任务、流程、环境和约束 |
+| 关注点 | 指令质量、正确性、可靠性、权限、隐私、成本、许可和维护 | 主机/系统兼容、工作流、自主性、已有工具、迁移成本和投入产出 |
+| 结论 | 可进行有限试用／需要修复／证据不足／不适合其核心用途 | 采用／附条件试用／改造后使用／不适合此场景 |
+
+第一轮可以单独完成并公开。第二轮引用第一轮，不为了迎合偏好改写客观发现。只支持 Mac 是通用范围限制；对 Windows 用户不可用是适配结论。导出丢页则是两种用户都需要面对的缺陷。
+
+## 设计、架构与底层理念
+
+第一轮不仅检查能不能运行，还分析作者的核心主张、价值取向、经验假设、因果逻辑和适用边界，检查是否接受反例与修正。再追踪这些理念如何落实到指令、工具、状态、验证和恢复机制，比较设计取舍。理念合理但实现薄弱，或实现稳健但理念偏颇，应分别指出。详见 [设计与理念](references/design-and-doctrine.md)。
+
+## 各大类采用 1–5 分
+
+标准及深入评估默认给分类分数：1 差、2 较弱、3 合格、4 强、5 优秀。第一轮十类包括目标、理念、架构、指令、正确性、可靠性、权限隐私、证据、效率维护和增量价值。第二轮另评任务、流程理念适配、环境、数据权限、成本和相对现有方案的价值。
+
+每个分数需给出证据、置信度、评估范围和理由。证据不足记 NE，不适用记 NA，不机械打中间分。必要条件失败不能被高平均分掩盖；两轮不合并成一个分数。分数是有锚点的专业判断，不是假装客观测量。详见 [评分标准](references/scoring.md)。
+
+## 第二轮增加已安装技能的重叠检查
+
+第一轮是通用筛查与评估；第二轮针对实际用途、工作流和工作环境做适用性测试，包含已有技能的重复、替代、部分重叠、互补以及触发冲突检查。
+
+**这里指只读检查已经安装的技能，不是替用户安装候选技能。** 安装评估器本身是下文的独立设置步骤；安装或启用任何被评估候选都需要用户授权，不是第二轮的自动操作。
+
+优先使用主机已提供的技能目录，仅在授权范围内读取相关名称、描述和必要的指令。无需读取密钥、聊天记录或全盘扫描，也不会自动执行、卸载或修改技能。无法读取目录时，可使用用户提供的脱敏清单，并标明检查范围不完整。详见 [重叠检查](references/installed-skill-overlap.md)。
+
+只读不等于全程离线：云端 Agent 读取的文字可能进入其服务商上下文，应遵守用户对数据和服务商的限制。清单保留在私人第二轮材料中，不自动公开。
+
+第二轮明确记录实际检查及结果。如果没有运行代表性任务，只能标注“已评估，适用性尚未经任务验证”，不能把静态判断称作测试通过。
+
+## 安装与使用
+
+把仓库地址交给支持技能安装的 Agent：
+
+**https://github.com/TianjinAI/skill-evaluator**
+
+要求保留完整目录，特别是 `SKILL.md`、`references/`、`templates/` 与 `scripts/`。已存在同名技能时先保留自定义修改。可从 Releases 下载带校验值的 ZIP。不同主机的安装位置不同；1.4.0 已参考用户提供的 WorkBuddy 执行记录改进；新版尚未在 WorkBuddy 复跑，详见安装指南。
+
+第一轮示例：
+
+> 使用 skill-evaluator 评估这个仓库。先做独立通用审查，不安装被评估技能，明确哪些结论来自源码、哪些只是作者宣称。
+
+第二轮示例：
+
+> 在刚才的基线上做第二轮。我在 Windows 上每周制作客户报告，希望减少反复确认，资料只能交给获批服务商。请结合我现有的工作流给出建议。
+
+同时评估两个工具：
+
+> 分别做第一轮，再针对我的用途比较。不要把我的个人偏好当成工具的通用缺陷。
+
+评估深度与轮次相互独立：快速筛查、标准审查或深入验证。深入验证并不自动授权安装、付费、账号写入或公开私人材料。
+
+## 有哪些配套材料
+
+- 详细方法：证据等级、严重程度与置信度、必要条件、比较与版本复评。
+- 可编辑模板：两轮报告、CSV 证据记录、试用计划与实际结果。
+- 完整虚构案例：同一通用基线，对两个用户产生不同适配结论。
+- 可选目录生成脚本：只创建草稿，不联网、不执行候选、拒绝覆盖已有目录。
+- 测试、CI、贡献指南、隐私说明与行为评测方案。
+
+## 证据边界
+
+区分「作者宣称」「源码支持」「本地检查」「端到端任务验证」「未知」。结构检查通过不代表建议正确，测试计划也不是测试结果。自动测试覆盖目录生成器和文档链接；跨 Agent 的行为效果仍需要实际验证。完整记录见 [VALIDATION](VALIDATION.md)。
+
+公开第一轮前排除私人信息；第二轮资料默认按私人草稿管理。技能本身不添加遥测或后台服务，但主机、模型和工具仍有各自的数据处理方式。
+
+欢迎提交带有实际场景和证据的改进。详见 [贡献指南](CONTRIBUTING.md)、[更新记录](CHANGELOG.md) 和 [MIT 许可](LICENSE)。详细方法文档以英文为主；评估输出遵循用户使用的语言。
